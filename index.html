@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Access</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: monospace;
+    }
+
+    body {
+      background: black;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      letter-spacing: 4px;
+    }
+
+    input {
+      background: black;
+      border: 1px solid white;
+      color: white;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      outline: none;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 20px;
+      background: black;
+      border: 1px solid white;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: white;
+      color: black;
+    }
+
+    .error {
+      margin-top: 15px;
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>ACCESS</h1>
+    <input type="password" id="password" placeholder="••••••••">
+    <br>
+    <button onclick="check()">ENTER</button>
+    <div class="error" id="error">ACCESS DENIED</div>
+  </div>
+
+  <script>
+    function check() {
+      const pass = document.getElementById("password").value;
+      const error = document.getElementById("error");
+
+      if (pass === "gods2") {
+        window.location.href = "https://link-gods2.com";
+      } else if (pass === "idearis") {
+        window.location.href = "https://link-idearis.com";
+      } else {
+        error.style.display = "block";
+      }
+    }
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") check();
+    });
+  </script>
+
+</body>
+</html>
