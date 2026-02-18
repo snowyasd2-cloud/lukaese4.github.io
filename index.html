@@ -4,60 +4,59 @@
   <meta charset="UTF-8">
   <title>Access</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: monospace;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+  }
 
-    body {
-      background: black;
-      color: white;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  body {
+    height: 100vh;
+    background: 
+      linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url("panel.png") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .container {
-      text-align: center;
-    }
+  .container {
+    text-align: center;
+    backdrop-filter: blur(2px);
+  }
 
-    h1 {
-      margin-bottom: 20px;
-      letter-spacing: 4px;
-    }
+  input {
+    background: rgba(0,0,0,0.7);
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    width: 220px;
+    text-align: center;
+    outline: none;
+  }
 
-    input {
-      background: black;
-      border: 1px solid white;
-      color: white;
-      padding: 10px;
-      width: 200px;
-      text-align: center;
-      outline: none;
-    }
+  button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: black;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+  }
 
-    button {
-      margin-top: 15px;
-      padding: 8px 20px;
-      background: black;
-      border: 1px solid white;
-      color: white;
-      cursor: pointer;
-    }
+  button:hover {
+    background: white;
+    color: black;
+  }
 
-    button:hover {
-      background: white;
-      color: black;
-    }
-
-    .error {
-      margin-top: 15px;
-      color: red;
-      display: none;
-    }
+  .error {
+    margin-top: 15px;
+    color: red;
+    display: none;
+  }
   </style>
 </head>
 <body>
